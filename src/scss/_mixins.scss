@@ -1,0 +1,109 @@
+@mixin h-1 {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+@mixin h-2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+@mixin h-3 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+@mixin h-4 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+@mixin h-5 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@mixin h-6 {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+@mixin navigation_normal {
+  @include h-6();
+  color: $default_color;
+}
+
+@mixin navigation_hover {
+  @include h-6();
+  color: $default_color;
+  border-bottom: 3px solid $hover_color;
+}
+
+@mixin navigation_active {
+  @include h-6();
+  color: $active_color;
+  border-bottom: 3px solid $active_color;
+}
+
+@mixin link_normal {
+  @include h-4();
+  color: $default_color;
+  background-color: $background_color;
+  padding: $link_paddings;
+  cursor: pointer;
+}
+
+@mixin link_hover {
+  @include h-4();
+  color: $default_color;
+  background-color: $active_color;
+  padding: $link_paddings;
+  cursor: pointer;
+}
+
+@mixin link_active {
+  @include h-4();
+  color: $default_color;
+  background-color: $background_color;
+  padding: $link_paddings;
+  box-shadow: 4px 4px 30px $background_color;
+  cursor: pointer;
+}
+
+@mixin card_normal {
+  border: 2px solid $default_color;
+}
+
+@mixin card_hover {
+  border: 2px solid $default_color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba($background_color, 0.8);
+  }
+}
+
+@mixin card_active {
+  border: 2px solid $default_color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba($background_active_color, 0.8);
+  }
+}

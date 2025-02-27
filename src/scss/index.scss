@@ -1,0 +1,16 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+@import url('./_fonts.scss');
+@import url('./_cdn.scss');
+@import url('./_varables.scss');
+@import url('./_mixins.scss');
+
+html {
+  font-family: 'Raleway', sans-serif;
+}
