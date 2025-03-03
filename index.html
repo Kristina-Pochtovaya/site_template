@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/scss/index.scss">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/scss/index.scss" />
     <title>Site Template</title>
-</head>
-<body>
-    <div>HEllo</div>
+  </head>
+  <body>
+    <section class="main">
+      <div class="container">
+        <div class="navigation">
+          <div class="logo">
+            <p class="logo__text">
+              ACTIVE<span class="logo__text--highlited">BOX</span>
+            </p>
+          </div>
+          <nav>
+            <ul class="navigation-list">
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">features</a>
+              </li>
+              <li class="navigation-list__item navigation-list__item--active">
+                <a
+                  href="#"
+                  class="navigation-list__link navigation-list__link--active"
+                  >works</a
+                >
+              </li>
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">our team</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">testimonials</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="content">
+          <div class="main__title">
+            <p>Your Favorite One Page Multi Purpose Template</p>
+          </div>
+          <div class="main__description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              commodo cursus magna vel scelerisque nisl consectetur et.
+            </p>
+            <div class="main__link">
+              <a href="#">Find Out More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script type="module" src="./src/js/index.js"></script>
-</body>
+  </body>
 </html>

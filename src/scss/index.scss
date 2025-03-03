@@ -1,3 +1,9 @@
+@forward './fonts';
+@forward './cdn';
+@forward './varibles';
+@forward './mixins';
+@forward './main';
+
 * {
   text-decoration: none;
   margin: 0;
@@ -6,11 +12,13 @@
   box-sizing: border-box;
 }
 
-@import url('./_fonts.scss');
-@import url('./_cdn.scss');
-@import url('./_varables.scss');
-@import url('./_mixins.scss');
-
 html {
   font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  background-color: transparent;
+  margin: auto;
 }

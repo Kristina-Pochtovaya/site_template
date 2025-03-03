@@ -1,3 +1,5 @@
+@use './varibles';
+
 @mixin h-1 {
   font-weight: 900;
   font-size: 64px;
@@ -36,43 +38,39 @@
 
 @mixin navigation_normal {
   @include h-6();
-  color: $default_color;
+  color: varibles.$default_color;
 }
 
 @mixin navigation_hover {
-  @include h-6();
-  color: $default_color;
-  border-bottom: 3px solid $hover_color;
+  border-bottom: 3px solid varibles.$hover_color;
 }
 
 @mixin navigation_active {
-  @include h-6();
-  color: $active_color;
-  border-bottom: 3px solid $active_color;
+  border-bottom: 3px solid varibles.$active_color;
 }
 
 @mixin link_normal {
   @include h-4();
-  color: $default_color;
-  background-color: $background_color;
-  padding: $link_paddings;
+  color: varibles.$default_color;
+  background-color: varibles.$background_color;
+  padding: varibles.$link_paddings;
   cursor: pointer;
 }
 
 @mixin link_hover {
   @include h-4();
-  color: $default_color;
-  background-color: $active_color;
-  padding: $link_paddings;
+  color: varibles.$default_color;
+  background-color: varibles.$active_color;
+  padding: varibles.$link_paddings;
   cursor: pointer;
 }
 
 @mixin link_active {
   @include h-4();
-  color: $default_color;
-  background-color: $background_color;
-  padding: $link_paddings;
-  box-shadow: 4px 4px 30px $background_color;
+  color: varibles.$default_color;
+  background-color: varibles.$background_color;
+  padding: varibles.$link_paddings;
+  box-shadow: 4px 4px 30px varibles.$background_color;
   cursor: pointer;
 }
 
