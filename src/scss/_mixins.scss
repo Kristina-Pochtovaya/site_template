@@ -52,26 +52,6 @@
 @mixin link_normal {
   @include h-4();
   color: varibles.$default_color;
-  background-color: varibles.$background_color;
-  padding: varibles.$link_paddings;
-  cursor: pointer;
-}
-
-@mixin link_hover {
-  @include h-4();
-  color: varibles.$default_color;
-  background-color: varibles.$active_color;
-  padding: varibles.$link_paddings;
-  cursor: pointer;
-}
-
-@mixin link_active {
-  @include h-4();
-  color: varibles.$default_color;
-  background-color: varibles.$background_color;
-  padding: varibles.$link_paddings;
-  box-shadow: 4px 4px 30px varibles.$background_color;
-  cursor: pointer;
 }
 
 @mixin card_normal {
