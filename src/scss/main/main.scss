@@ -1,7 +1,7 @@
-@forward './header';
-@forward './content';
 @use '../varibles';
 @use '../mixins';
+@forward './navigation';
+@forward './content';
 
 .main {
   padding: 38px 0 120px;
