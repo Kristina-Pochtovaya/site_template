@@ -1,0 +1,44 @@
+@use './cdn';
+@use './varibles';
+@use './mixins';
+
+.footer {
+  padding: 24px 0;
+  background-color: rgb(44, 49, 84);
+
+  .copyright {
+    max-width: 370px;
+    margin: 0 auto;
+
+    &__text {
+      @include mixins.h-5();
+
+      color: rgb(128, 128, 128);
+
+      &--highlighted {
+        text-transform: capitalize;
+        color: varibles.$default_color;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .footer {
+    .copyright {
+      max-width: 314px;
+
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .footer {
+    .copyright {
+      max-width: 280px;
+    }
+  }
+}
