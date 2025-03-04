@@ -85,3 +85,10 @@
     background-color: rgba($background_active_color, 0.8);
   }
 }
+
+@mixin social-buttons-title {
+  text-align: center;
+  color: varibles.$default_color;
+  @include h-5();
+  text-transform: uppercase;
+}

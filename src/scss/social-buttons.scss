@@ -1,0 +1,146 @@
+@use './cdn';
+@use './varibles';
+@use './mixins';
+
+.social-buttons {
+  padding: 71px 0;
+  background-color: rgb(53, 60, 101);
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+
+    > * {
+      margin: 0 15px;
+      max-width: 370px;
+    }
+
+    .location {
+      &__title {
+        @include mixins.social-buttons-title();
+        margin-bottom: 29px;
+        text-align: center;
+      }
+
+      &__address {
+        @include mixins.h-5();
+        color: varibles.$default_color;
+        text-align: center;
+      }
+    }
+
+    .social-buttons-contacts {
+      &__title {
+        @include mixins.social-buttons-title();
+        margin-bottom: 49px;
+        text-align: center;
+      }
+
+      .social-buttons-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -15px;
+
+        li {
+          margin: 0 15px;
+          text-align: center;
+
+          a {
+            color: varibles.$social_button_color;
+            border: 1px solid varibles.$social_button_color;
+            padding: 10px 14px;
+          }
+        }
+      }
+    }
+
+    .about {
+      &__title {
+        @include mixins.social-buttons-title();
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      &__description {
+        @include mixins.h-5();
+        color: varibles.$default_color;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .social-buttons {
+    .container {
+      max-width: 984px;
+
+      .content {
+        flex-direction: column;
+        > * {
+          max-width: 315px;
+        }
+
+        .location {
+          margin-bottom: 69px;
+
+          &__title {
+            font-size: 16px;
+          }
+
+          &__address {
+            font-size: 16px;
+          }
+        }
+
+        .social-buttons-contacts {
+          margin-bottom: 59px;
+
+          &__title {
+            font-size: 16px;
+          }
+
+          .social-buttons-list {
+            a {
+              padding: 8px 12px;
+            }
+          }
+        }
+
+        .about {
+          &__title {
+            font-size: 16px;
+          }
+
+          &__description {
+            font-size: 14px;
+            line-height: 1.1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .social-buttons {
+    .container {
+      max-width: 280px;
+
+      .content {
+        > * {
+          max-width: 280px;
+        }
+
+        .social-buttons-list {
+          a {
+            padding: 9px 8px;
+          }
+        }
+      }
+    }
+  }
+}
