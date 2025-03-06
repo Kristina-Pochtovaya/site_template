@@ -46,36 +46,17 @@
       &__link {
         @include mixins.navigation_normal();
 
-        position: relative;
         padding: 10px 35px;
         text-transform: uppercase;
 
         &:hover {
           color: varibles.$default_color;
-
-          &::after {
-            @include mixins.navigation_hover();
-
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-          }
+          border-bottom: varibles.$navigation_hover;
         }
 
         &--active {
           color: varibles.$active_color;
-
-          &::after {
-            @include mixins.navigation_active();
-
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-          }
+          border-bottom: varibles.$navigation_active;
         }
       }
     }
