@@ -1,13 +1,8 @@
 @use './varibles';
 @use './mixins';
 
-.slider-content {
-  width: 100vw; /* Занимает всю ширину экрана */
-  overflow: hidden; /* Убираем лишние слайды */
-}
-
-.slick-slide {
-  width: 100vw; /* Каждый слайд занимает всю ширину */
+.slider-wrapper {
+  width: 100vw;
 }
 
 .slider {

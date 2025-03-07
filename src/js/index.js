@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     dots: true,
     slidesToShow: 1,
     centerMode: true,
-    variableWidth: false,
+    variableWidth: true,
   })
+  $('.slider-wrapper').removeAttr('style')
 })
