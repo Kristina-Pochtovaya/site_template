@@ -15,6 +15,9 @@
     margin: 0 -30px;
 
     .worker-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       margin: 0 30px;
       max-width: 270px;
 
