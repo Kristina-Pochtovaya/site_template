@@ -46,6 +46,12 @@
         font-style: italic;
       }
     }
+
+    .author {
+      p {
+        text-align: center;
+      }
+    }
   }
 
   .slick-dots {
@@ -75,5 +81,29 @@
   .slick-arrow {
     position: absolute;
     top: 50%;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .slider {
+    &__description {
+      .title {
+        padding: 0 10px;
+
+        p {
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+
+      .author {
+        padding: 0 10px;
+
+        p {
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
   }
 }
