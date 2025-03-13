@@ -1,0 +1,98 @@
+@use './varibles';
+
+@mixin h-1 {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+@mixin h-2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+@mixin h-3 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+@mixin h-4 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+@mixin h-5 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@mixin h-6 {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+@mixin navigation_normal {
+  @include h-6();
+  color: varibles.$default_color;
+}
+
+@mixin link_normal {
+  @include h-4();
+  color: varibles.$default_color;
+}
+
+@mixin card_normal {
+  position: relative;
+  border: 2px solid varibles.$default_color;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(varibles.$background_color, 0.8);
+    transition: transform 0.5s ease-in-out;
+    transform: scale(0);
+  }
+}
+
+@mixin card_hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    transform: scale(1);
+  }
+}
+
+@mixin card_active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(varibles.$background_active_color, 0.8);
+  }
+}
+
+@mixin social-buttons-title {
+  text-align: center;
+  color: varibles.$default_color;
+  @include h-5();
+  text-transform: uppercase;
+}

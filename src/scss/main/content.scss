@@ -1,0 +1,80 @@
+@use '../varibles';
+@use '../mixins';
+
+.main {
+  .content {
+    padding-top: 130px;
+    text-align: center;
+
+    .main {
+      &__title {
+        @include mixins.h-1();
+
+        color: varibles.$default_color;
+        margin-bottom: 32px;
+      }
+
+      &__link {
+        background-color: varibles.$background_color;
+        padding: varibles.$link_paddings;
+        width: fit-content;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+
+      &__link:hover {
+        background-color: varibles.$active_color;
+      }
+
+      &__link--active {
+        background-color: varibles.$background_color;
+        box-shadow: 4px 4px 30px varibles.$background_color;
+      }
+
+      &__description p {
+        @include mixins.h-5();
+
+        color: varibles.$default_color;
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 82px;
+      }
+
+      &__link a {
+        @include mixins.link_normal();
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .main {
+    .content {
+      .main {
+        &__title {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .main {
+    .content {
+      .main {
+        &__title {
+          font-size: 36px;
+        }
+
+        &__description p {
+          font-size: 14px;
+        }
+
+        &__link {
+          padding: 20px 48px;
+        }
+      }
+    }
+  }
+}

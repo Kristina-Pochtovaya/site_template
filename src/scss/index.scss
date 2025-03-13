@@ -1,0 +1,31 @@
+@forward './fonts';
+@forward './cdn';
+@forward './varibles';
+@forward './mixins';
+@forward './main/main';
+@forward './advantages.scss';
+@forward './wokers.scss';
+@forward './interior';
+@forward './slider.scss';
+@forward './download.scss';
+@forward './social-buttons';
+@forward './footer';
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  background-color: transparent;
+  margin: auto;
+}
