@@ -46,7 +46,7 @@
       &__link {
         @include mixins.navigation_normal();
 
-        padding: 10px 35px;
+        padding: 10px 35px 32px;
         text-transform: uppercase;
 
         &:hover {
